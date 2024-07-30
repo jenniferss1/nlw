@@ -1,6 +1,5 @@
 import pytest
 import uuid
-from datetime import datetime, timedelta
 from .email_to_invite_repository import EmailsToInviteRepository
 from src.models.settings.db_connection_handler import db_connection_handler
 
@@ -18,7 +17,7 @@ def test_registry_email():
         "email": "willow@email.com"
     }
     
-    emails_to_invite_repository.registry_email(email_trips_info)\
+    emails_to_invite_repository.registry_email(email_trips_info)
 
 @pytest.mark.skip(reason= "interacao com o banco")
 def test_find_emails_from_trip():
