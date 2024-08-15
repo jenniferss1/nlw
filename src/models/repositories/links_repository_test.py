@@ -26,5 +26,6 @@ def test_find_links():
     links_repository = LinksRepository(conn)
     
     links = links_repository.find_links(trip_id)
-    print()
-    print(links)
+    
+    assert isinstance(links, list)
+    assert isinstance(links[0], tuple)
